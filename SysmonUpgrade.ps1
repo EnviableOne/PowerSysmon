@@ -16,7 +16,7 @@ if($null -ne $file){
   return
  } 
  Write-Host "Sysmon version is below $($ver.tostring()), removal starting..." -ForegroundColor Green
- Start-Process Sysmon64.exe -ArgumentList "-u","force" -Wait
+ Start-Process Sysmon64.exe -ArgumentList "-u","force" -Wait -NoNewWindow
 
  Stop-Service Sysmon64 -Force
  Stop-Service sysmondrv -Force
